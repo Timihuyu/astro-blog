@@ -1,0 +1,44 @@
+---
+import { Picture } from 'astro:assets';
+import img from '~/assets/mz.jpg';
+import img_2 from '~/assets/logo.jpg';
+import { SiteDescription, SiteTitle } from '~/config';
+import MarkdownLayout from '~/layouts/MarkdownLayout.astro';
+---
+
+<MarkdownLayout
+	title={SiteTitle}
+	description={SiteDescription}
+	hide={['title', 'comments']}
+	currentNav="Home"
+>
+	<div class="flex flex-col items-center gap-4 xl:flex-row">
+		<Picture class="lg:max-w-md" src={img} formats={['avif', 'webp']} alt="a dog" loading="eager" />
+		<div>
+			<h1>Hello there! I am 闻鸣志👋</h1>
+			<p>
+				闻鸣志，释意为“闻”课堂内外，“鸣”多家之言，“志”新闻之路，是西北民族大学新闻传播学院新闻学专业的官方公众号,
+				简介：
+			</p>
+			<ul class="list-disc">
+				<li>
+					公众号以各级新闻专业学生为主体，分享学生作品，包括新闻采访与写作、新闻摄影、以及新媒体运营实践等等。
+                    同时，闻鸣志也积极组织实践活动，带领学生参与报道大型学术会议，大型活动等。
+				</li>
+				<li>
+					闻鸣志团队注册于2017年6月18日，至今已在石老师的带领指导下运行8年，粉丝量达到4138。
+					团队内部分为文字组和视频组两个组别，文字组负责日常推文的产出，实践活动的文稿与排版工作，视频组负责日常视频的产出以及
+					实践活动的图片与视频工作，两个组别齐心协力，共同发展闻鸣志。
+				</li>
+				<li>
+					闻鸣志两年一换届，有队长、文字组组长、视频组组长、各小组长等职位。队长负责统筹协调队内的各项工作，和石老师沟通做到上传下达；
+					组长负责把关将要发出的各个文章和视频，担任小责编一职；各小组长负责指导带领组员进行文稿和视频的创作。
+                    闻鸣志运行许久，已经成为一个成熟的自媒体平台，具有一定的声量和影响力，能够为新闻学专业学子提供一个最合适的实践平台。
+				</li>
+			</ul>
+			<div class="mr-0">
+               <Picture class="lg:max-w-md right-0" src={img_2} formats={['avif', 'webp']} alt="a dog" loading="eager" />
+            </div>
+		</div>
+	</div>
+</MarkdownLayout>
