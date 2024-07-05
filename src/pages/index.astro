@@ -1,7 +1,6 @@
 ---
 import { Picture } from 'astro:assets';
 import img from '~/assets/mz.jpg';
-import img_2 from '~/assets/logo.jpg';
 import { SiteDescription, SiteTitle } from '~/config';
 import MarkdownLayout from '~/layouts/MarkdownLayout.astro';
 ---
@@ -36,9 +35,6 @@ import MarkdownLayout from '~/layouts/MarkdownLayout.astro';
                     闻鸣志运行许久，已经成为一个成熟的自媒体平台，具有一定的声量和影响力，能够为新闻学专业学子提供一个最合适的实践平台。
 				</li>
 			</ul>
-			<div class="mr-0">
-               <Picture class="lg:max-w-md right-0" src={img_2} formats={['avif', 'webp']} alt="a dog" loading="eager" />
-            </div>
 		</div>
 	</div>
 </MarkdownLayout>
